@@ -18,7 +18,7 @@ const App = () => {
             <Header />
             <MainPage>
                 <SideBar />
-                <section className="col-12 col-md-8 bg-danger">
+                <section className="col-12 col-md-9 bg-light pt-5">
                     <p> Main Page </p>
                 </section>
             </MainPage>
