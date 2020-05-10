@@ -25,18 +25,25 @@ const BrandName = styled.span`
     color: #fb5607
 `;
 
-const Logo = styled.span`
+const Menu = styled.span`
     display: none;
     @media (max-width: 768px) {
-        display: flex
+        display: flex;
     }
 `;
+
+const Logo = styled.i`
+    padding: 5px;
+    border: 2px solid #fb5607;
+    color: #fb5607;
+    border-radius: 50%;
+`
 
 const Header = () =>  {
     return (
         <HeaderContainer>
-            <span> <i className="fab fa-stack-overflow"></i> <BrandName>Stack Libraries </BrandName>  </span>
-            <Logo> <i className="fas fa-align-justify"></i> </Logo>
+            <span> <Logo className="fab fa-stack-overflow"></Logo> <BrandName> React_Stack </BrandName>  </span>
+            <Menu> <i className="fas fa-align-justify"></i> </Menu>
         </HeaderContainer>
     )
 }

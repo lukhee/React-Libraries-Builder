@@ -12,3 +12,21 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Sibar Navlink styling */
+.main-nav {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.main-nav:hover {
+    color: red;
+    background: white;
+    text-decoration: none !important;
+}
+
+.main-nav-active {
+    color: #fb5607;
+    background: #fb5607;
+}
