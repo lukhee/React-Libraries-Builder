@@ -38,6 +38,7 @@ const sideBar = () => {
             <div className="w-100 pt-3">
                 { MenuList.map(menu=> (
                     <NavLink exact to={menu.link}
+                        key={menu.id}
                         className="main-nav"
                         activeClassName="main-nav-active">
                         <p className="p-2 pl-4 m-0"> <i className={`pr-2 fas fa-${menu.fontAweSomeClass}`}> </i> {menu.name} </p> </NavLink>

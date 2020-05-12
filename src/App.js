@@ -18,6 +18,13 @@ const MainPage = styled.div`
     display: flex;
 `
 
+const MainSection = styled.div`
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto
+`
+
 const App = () => {
     return (
         <div>
@@ -25,13 +32,15 @@ const App = () => {
                 <Header />
                 <MainPage>
                     <SideBar />
-                    <section className="col-12 col-md-10 bg-light mt-2 pt-5">
-                        <Switch>
-                            <Route exact path="/" component={HomePage} />
-                            <Route path="/color-picker" component={ColorPickker} />
-                            <Route path="/skelenton" component={Skelenton} />
-                            <Route path="/lazy-loading" component={LazyLoading} />
-                        </Switch>
+                    <section className="col-12 col-md-10 bg-light mt-2  px-0 pt-5">
+                        <MainSection>
+                            <Switch>
+                                <Route exact path="/" component={HomePage} />
+                                <Route path="/color-picker" component={ColorPickker} />
+                                <Route path="/skelenton" component={Skelenton} />
+                                <Route path="/lazy-loading" component={LazyLoading} />
+                            </Switch>
+                        </MainSection>
                     </section>
                 </MainPage>
             </Router>
