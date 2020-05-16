@@ -33,7 +33,7 @@ return (
         <p style={{fontSize: "14px"}} className="w-md-75 p-4 bg-white rounded">
             Color pickers is a very nice tools that aren't commonly used in a
             project. The color offers 13 different color pickers,which are based on
-            well-known ones. For example the Chrone, sketch, Guthub and Photoshop
+            well-known ones. For example the Chrome, sketch, Guthub and Photoshop
             Color Picker are available as React,js components and we will exploring
             some on this page.
         </p>
