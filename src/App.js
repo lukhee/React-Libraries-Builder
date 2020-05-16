@@ -7,8 +7,6 @@ import HomePage from './components/layout/homePage/homePage';
 import ColorPickker from './components/layout/colorPicker';
 import Skelenton from './components/layout/skelenton';
 import LazyLoading from './components/layout/lazyLoading';
-// import OtherPage from './components/layout/newPage'
-// import './App.css';
 
 const MainPage = styled.div`
     width: 100vw;

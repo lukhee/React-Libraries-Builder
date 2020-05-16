@@ -29,6 +29,11 @@ const MenuList = [
         link: 'lazy-loading',
         name: 'Lazy Loading',
         fontAweSomeClass: 'spinner',
+    }, {
+        id: 5,
+        link: 'dark-mode',
+        name: 'Dark Mode',
+        fontAweSomeClass: 'toggle-on',
     }
 ]
 
