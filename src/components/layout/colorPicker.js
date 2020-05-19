@@ -28,8 +28,8 @@ const ColorPicker = () => {
     const handleTwitterColorChange = (color) => setBGColor({...bgColor, twitterColor: color.hex})
 
 return (
-    <div className="container px-0 pt-4">
-        <h2> React Color Picker </h2>
+    <div>
+        <h4> React Color Picker </h4>
         <p style={{fontSize: "14px"}} className="w-md-75 p-4 bg-white rounded">
             Color pickers is a very nice tools that aren't commonly used in a
             project. The color offers 13 different color pickers,which are based on

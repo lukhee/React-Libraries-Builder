@@ -3,7 +3,7 @@ import React from 'react'
 const LazyLoading = () => {
     return (
         <div>
-            Lazy Loading
+            <h4> Lazy Loading </h4>
         </div>
     )
 }

@@ -1,0 +1,24 @@
+{
+  "usersData": [
+    {
+      "id": 1,
+      "username": "james",
+      "fileUploaded": [
+        {
+          "id": 10,
+          "file": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "timileyin",
+      "fileUploaded": []
+    },
+    {
+      "id": 3,
+      "username": "wale",
+      "fileUploaded": []
+    }
+  ]
+}

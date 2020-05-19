@@ -14,7 +14,7 @@ const ReactSkelenton = () => {
 
     return (
         <div>
-            <h2> React Skelenton </h2>
+            <h4> React Skelenton </h4>
             <p style={{fontSize: "14px"}} className="w-md-75 p-4 bg-white rounded">
                 React skelenton enable us to make very attractive loading effect rather than the normal loader we are used to.
             </p>

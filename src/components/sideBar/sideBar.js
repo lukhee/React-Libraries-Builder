@@ -34,6 +34,11 @@ const MenuList = [
         link: 'dark-mode',
         name: 'Dark Mode',
         fontAweSomeClass: 'toggle-on',
+    }, {
+        id: 6,
+        link: 'file-upload',
+        name: 'File Upload',
+        fontAweSomeClass: 'file-upload',
     }
 ]
 
@@ -47,7 +52,8 @@ const sideBar = () => {
                         className="main-nav"
                         activeClassName="main-nav-active">
                         <p className="p-2 pl-4 m-0"> <i className={`pr-2 fas fa-${menu.fontAweSomeClass}`}> </i> {menu.name} </p> </NavLink>
-                ))}
+                    )
+                )}
             </div>
         </SideBarContainer>
     )

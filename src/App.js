@@ -7,6 +7,8 @@ import HomePage from './components/layout/homePage/homePage';
 import ColorPickker from './components/layout/colorPicker';
 import Skelenton from './components/layout/skelenton';
 import LazyLoading from './components/layout/lazyLoading';
+import DarkModeToggle from './components/layout/darkModeToggle';
+import FileUload from './components/layout/filesUpload/fileUpload';
 
 const MainPage = styled.div`
     width: 100vw;
@@ -37,6 +39,8 @@ const App = () => {
                                 <Route path="/color-picker" component={ColorPickker} />
                                 <Route path="/skelenton" component={Skelenton} />
                                 <Route path="/lazy-loading" component={LazyLoading} />
+                                <Route path="/dark-mode" component={DarkModeToggle} />
+                                <Route path="/file-upload" component={FileUload} />
                             </Switch>
                         </MainSection>
                     </section>
