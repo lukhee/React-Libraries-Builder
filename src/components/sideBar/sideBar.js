@@ -39,6 +39,11 @@ const MenuList = [
         link: 'file-upload',
         name: 'File Upload',
         fontAweSomeClass: 'file-upload',
+    }, {
+        id: 7,
+        link: 'login',
+        name: 'Login Page',
+        fontAweSomeClass: 'folder',
     }
 ]
 

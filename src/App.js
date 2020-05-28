@@ -9,6 +9,9 @@ import Skelenton from './components/layout/skelenton';
 import LazyLoading from './components/layout/lazyLoading';
 import DarkModeToggle from './components/layout/darkModeToggle';
 import FileUload from './components/layout/filesUpload/fileUpload';
+import Login from './components/layout/auth/login';
+import Register from './components/layout/auth/register';
+import FileManager from './components/layout/auth/fileManager';
 
 const MainPage = styled.div`
     width: 100vw;
@@ -41,6 +44,9 @@ const App = () => {
                                 <Route path="/lazy-loading" component={LazyLoading} />
                                 <Route path="/dark-mode" component={DarkModeToggle} />
                                 <Route path="/file-upload" component={FileUload} />
+                                <Route path="/login" component={Login} />
+                                <Route path="/register" component={Register} />
+                                <Route path="/file-manager" component={FileManager} />
                             </Switch>
                         </MainSection>
                     </section>
