@@ -1,30 +1,68 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from "axios"
 
-function Register() {
+// Register New User
+const registerUser = async ({name, password}) => {
+        const config = {
+            'Content-Type': 'application/json',
+        };
+        const body = {
+            "id": name,
+            "name": name,
+            password: password,
+            "fileUploaded": []
+        };
+        const result = await axios.post(
+            `http://localhost:3004/usersData/`,
+            body,
+            config
+        );
+        return result
+    }
+
+// check if name exist
+const CheckIfNameFound = async(name) => {
+    const result = await axios.get('http://localhost:3004/usersData')
+    const users = result.data
+    const userFound = users.find(user=> user.name === name)
+    return new Promise((res, rej) => {
+        if(!userFound) {
+            return res(true)
+        }
+        return rej({msg: "User Found"})
+    })
+}
+
+function Register({history}) {
     const [formData, setFormData] = useState ({
         name: '',
         password: '',
         confirmPassword: ''
     })
 
+    const { name, password, confirmPassword } = formData
+
     const onChangeHandler = (e) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value.trim()
         })
     }
 
     const submitForm = (e) =>{
         e.preventDefault()
-        alert("submit login in progress ...")
         //  check if password are equal
+        if(password !== confirmPassword) return alert("password not match")
 
-        // Call API to submit new USER
-
-        //  Redirect if successfull
-
-        //  Throw an ALert if Error Found
+        // check if name already exit
+        CheckIfNameFound(name)
+            .then(result=> registerUser({name, password})) // Call API to submit new USER
+            .then(res=> history.push('/file-manager')) //  Redirect if successfull
+            .catch(error=> {
+                console.log(error)
+                alert(error.msg)
+            }) //  Throw an ALert if Error Found
 
     }
 

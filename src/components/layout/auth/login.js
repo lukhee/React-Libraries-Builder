@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 import { Link } from 'react-router-dom'
 
 const data = {
@@ -15,15 +16,13 @@ const data = {
 }
 
 // creating a fake login API with 1 seconds in delay
-const LoginUser = (loginData) => {
+const LoginUser = async (loginData) => {
+    const result = await axios.get('http://localhost:3004/usersData');
+    const users = result.data
     return new Promise((res, rej) => {
-        const verifyLogin = data.userInfo.find(user=> user.password === loginData.password && user.name === loginData.name)
-        setTimeout(() =>
-        {
+        const verifyLogin = users.find(user=> user.password === loginData.password && user.name === loginData.name)
             if(verifyLogin) return res(verifyLogin)
             return rej({msg: "Invalid Credentials", statusCode: 301})
-        }
-            , 1000)
     })
 }
 

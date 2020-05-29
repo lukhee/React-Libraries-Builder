@@ -2,7 +2,8 @@
   "usersData": [
     {
       "id": 1,
-      "username": "james",
+      "name": "lukman",
+      "password": "password",
       "fileUploaded": [
         {
           "id": 10,
@@ -12,12 +13,13 @@
     },
     {
       "id": 2,
-      "username": "timileyin",
+      "nname": "timileyin",
+      "password": "password",
       "fileUploaded": []
     },
     {
       "id": 3,
-      "username": "wale",
+      "name": "wale",
       "fileUploaded": []
     }
   ]

@@ -11,7 +11,7 @@ const FileUpload = () => {
     });
     const [loginInfo, setLogin] = useState({
         loading: true,
-        login: false,
+        login: true,
         userInfo: '',
         errorMessage: '',
     });
